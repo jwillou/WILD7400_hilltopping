@@ -7,4 +7,4 @@ setwd(paste(directory,"/source/", sep = ''))    # set temp working directory
 #library()
 
 #source functions
-#source(paste(getwd(), "/RunModel.R", sep = ''))
+source(paste(getwd(), "/LandscapeInit.R", sep = ''))
