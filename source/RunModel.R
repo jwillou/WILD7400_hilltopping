@@ -7,8 +7,8 @@ source(paste(directory, "/source/FunctionSourcer.R", sep =''))
 elevation = c(0, 400)           #peak elevation min and max
 landscape = 150                 #number of patches on each side, total patch number = landscape*landscape
 
-nindvs    = 500                 #number of individuals to simulate
-nsteps    = 1000                #number of steps an individual can take
+nindvs    = 50                  #number of individuals to simulate
+nsteps    = 500                 #number of steps an individual can take
 move      = 0.8                 #decimal likelihood of individual moving to highest neighbor patch (R&G call this q)
 
 #initialize landscape
