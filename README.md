@@ -2,7 +2,7 @@
 
 **[Simple model assignment](https://auburn.instructure.com/courses/1390015/assignments/11090050)**
 
-Butterfly dispersal - hill topping
+**Butterfly dispersal and hilltopping**
 
 When individuals disperse they often use corridors, which we tend to think of as linear features on the landscape. However, corridors can also be present in patterns we don't expect. These so-called virtual corridors can appear when landscape features that appear unimportant to us influence individual behavior. In many butterfly species, individuals move uphill to congregate and find mates, a behavior called hill topping. We will use the hill topping model concept of Pe'er et al. (2005)* to explore this phenomenon in butterflies, using a simple agent based model we will write in R.
 
