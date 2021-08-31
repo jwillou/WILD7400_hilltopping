@@ -1,5 +1,3 @@
-#FunctionSourcer.R
-
 #Set working directory, import packages, source functions, 
 setwd(paste(directory,"/source/", sep = ''))    # set temp working directory 
 
@@ -8,3 +6,4 @@ setwd(paste(directory,"/source/", sep = ''))    # set temp working directory
 
 #source functions
 source(paste(getwd(), "/LandscapeInit.R", sep = ''))
+source(paste(getwd(), "/NewPop.R", sep = ''))
