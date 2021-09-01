@@ -17,11 +17,13 @@ image(land)
 
 #initialize individuals on landscape
 pop = NewPop(nindvs, landscape)
+pop = rbind(pop,NewPop(nindvs, landscape))
 points(pop[,1]/150, pop[,2]/150, pch=19, cex=0.5)
-#plot(-100,-100, xlim=c(0,150), ylim=c(0,150))
-#points(pop[,1], pop[,2], pch=19, cex=0.5)
+plot(-100,-100, xlim=c(0,150), ylim=c(0,150))
+points(pop[,1], pop[,2], pch=19, cex=0.5)
 
 #allow individuals to move within landscape
+
 
 #extract needed output from simulation
 
