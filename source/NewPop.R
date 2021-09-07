@@ -1,6 +1,6 @@
 NewPop = function(nindvs, landscape){
   #how far apart should individuals be, at max?
-  variance = 50 #values is in cells
+  variance = 25 #values is in cells
   
   #initialize pop object
   pop = matrix(nrow=nindvs, ncol=2)
