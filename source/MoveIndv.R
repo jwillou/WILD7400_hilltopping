@@ -16,9 +16,7 @@ MoveIndv=function(indv, land, move, nsteps, elevation, landscape){
     #move to higher elevation
     if(movehigh==1){
       #find highest elevation cell
-      highpt = which(land[(cxpos-1):(cxpos+1), 
-                          (cypos-1):(cypos+1)] == max(land[(cxpos-1):(cxpos+1), 
-                                                           (cypos-1):(cypos+1)]), arr.ind = TRUE)
+      highpt = which(land[(cxpos-1):(cxpos+1), (cypos-1):(cypos+1)] == max(land[(cxpos-1):(cxpos+1), (cypos-1):(cypos+1)]), arr.ind = TRUE)
       
       #calculate new position (x and y values)
       if(highpt[1]==1){xpos = cxpos - 1 }
