@@ -9,7 +9,7 @@ landscape.V = 150                 #number of patches on each side, total patch n
 nindvs.V    = 50                  #number of individuals to simulate
 nsteps.V    = 500                 #number of steps an individual can take
 move.V      = c(0.3,0.8)          #decimal likelihood of individual moving to highest neighbor patch (R&G call this q)
-reps        = 20                   #number of replicates to run each model
+reps        = 5                   #number of replicates to run each model
 
 parameters = expand.grid(elevation.V,landscape.V,nindvs.V,nsteps.V,move.V)
 colnames(parameters) = c("elevation","landscape","nindvs","nsteps","move")
@@ -23,6 +23,8 @@ for(p in 1:nrow(parameters)){
   move      = parameters$move[p]
   
   for(r in 1:reps){
+    pdf(paste(directory, "/output/butterflypath_", r, ".pdf", sep=""), width=8, height=8)
+    
     #initialize landscape
     land = LandscapeInit(elevation, landscape)
     image(land)
@@ -51,9 +53,8 @@ for(p in 1:nrow(parameters)){
     rownames(pathways) = seq(1,nindvs,1)
     
     #extract needed output from simulation
-    #for this project it is fine to NOT do any stats, but you will want to export something (maybe a figure) so you and
-    #everyone can see how your model worked. we will use this to talk about approaches that worked well/did not work great.
-    
+    write.table(pathways, paste(directory, "/output/butterflypath_", r, ".csv", sep=""), row.names=F, col.names=F, sep=",")
+    dev.off()
   } 
 }
 
