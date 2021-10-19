@@ -43,7 +43,7 @@ pop[,2]  = y + rpois(nindvs, variance)
 #GREAT idea for debugging, not great for scaling up
 
 pop = CreatePop(nindv)
-pop #if you print this for every parameter combo and every replicate, your standard out file will be BANANAS
+#pop #if you print this for every parameter combo and every replicate, your standard out file will be BANANAS
 ####5. how to debug####
 #generally, run line by line
 #set loop values to 1, then 2, then 3...
@@ -53,8 +53,8 @@ pop #if you print this for every parameter combo and every replicate, your stand
 #broken code
 i = rnorm(10, 0, 1)
 y = 0
-for(i in 1:10){
-  y = y + log(i[,i])
+for(ii in 1:10){
+  y = y + log(i[ii])
 }
 
 #more complexly broken code:
